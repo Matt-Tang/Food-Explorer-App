@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Explorer</string>
+    <string name="action_settings">Settings</string>
+    <string name="Column_Food">FOOD</string>
+    <string name="Column_Drinks">DRINKS</string>
+    <string name="Food_McDonalds_string">McDonalds</string>
+    <string name="Food_Korean_string">Korean Food</string>
+    <string name="Food_Japanese_string">Japanese Food</string>
+    <string name="Food_AllFood_string">All Food</string>
+    <string name="Food_AddOption_string">Add Option</string>
+    <string name="Drink_BubbleTea_string">Bubble Tea</string>
+    <string name="Drink_Starbucks_string">Starbucks</string>
+    <string name="Drink_TimHortons_string">Tim Hortons</string>
+</resources>
