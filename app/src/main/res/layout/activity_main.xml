@@ -28,110 +28,139 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        android:backgroundTint="#993399"
+        app:srcCompat="@drawable/location_16px" />
 
-
-    <LinearLayout
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal" >
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="193dp"
-            android:layout_height="match_parent"
-
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="75dp"
-            android:background="#ff9966"
-            android:text="@string/Column_Food"
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="194dp"
-            android:layout_height="match_parent"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="75dp"
-            android:background="#99ccff"
-            android:text="@string/Column_Drinks"
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintBaseline_toBaselineOf="@+id/textView"
-            app:layout_constraintStart_toEndOf="@+id/textView" />
-    </LinearLayout>
-
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+        tools:context=".MainActivity">
 
         <LinearLayout
-            android:layout_width="193dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
+            android:id="@+id/firstLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/firstView"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_marginTop="75dp"
+                android:background="#ff9900"
+                android:text="@string/Column_Food"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/firstView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true" />
+
+        <LinearLayout
+            android:id="@+id/secondLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/firstView"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_marginTop="75dp"
+                android:background="#004d99	"
+                android:text="@string/Column_Drinks"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:id="@+id/thirdLayout"
             android:layout_marginTop="120dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/secondView"
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/Food-McDonalds"
+                android:id="@+id/Food_McDonalds"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Food_McDonalds_string"
                 android:onClick="goToGoogleMaps"/>
 
             <Button
-                android:id="@+id/Food-KoreanFood"
+                android:id="@+id/Food_KoreanFood"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Food_Korean_string"
                 android:onClick="goToGoogleMaps"/>
 
             <Button
-                android:id="@+id/Food-JapaneseFood"
+                android:id="@+id/Food_JapaneseFood"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Food_Japanese_string"
                 android:onClick="goToGoogleMaps"/>
         </LinearLayout>
 
+        <View
+            android:id="@+id/secondView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true" />
+
         <LinearLayout
-            android:layout_width="193dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
+            android:id="@+id/fourthlayout"
             android:layout_marginTop="120dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/secondView"
             android:orientation="vertical">
 
             <Button
                 android:id="@+id/Drink_BubbleTea"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/Drink_BubbleTea_string" />
+                android:text="@string/Drink_BubbleTea_string"
+                android:onClick="goToGoogleMaps"/>
 
             <Button
                 android:id="@+id/Drink_Starbucks"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/Drink_Starbucks_string" />
+                android:text="@string/Drink_Starbucks_string"
+                android:onClick="goToGoogleMaps"/>
 
             <Button
                 android:id="@+id/Drink_TimHortons"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/Drink_TimHortons_string" />
+                android:text="@string/Drink_TimHortons_string"
+                android:onClick="goToGoogleMaps"/>
+
         </LinearLayout>
-    </LinearLayout>
-
-
-
-
+    </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>
+
